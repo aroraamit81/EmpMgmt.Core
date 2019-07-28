@@ -1,0 +1,29 @@
+﻿
+
+@model EmployeeViewModel
+
+@{
+    ViewBag.PageTile = Model.PageTitle;
+    var employees = Model.Employees;
+}
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+    </tr>
+
+    @foreach (Employee e in employees)
+    {
+        <tr>
+            <td>@e.EmpId</td>
+            <td>@e.Name</td>
+            <td>@e.Email</td>
+            <td>@e.Department</td>
+        </tr>
+    }
+
+
+</table>
+
